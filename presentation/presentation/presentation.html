@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Пронякова О.М.">
+  <title>Эвристика</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link href="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Freset%2Ecss" rel="stylesheet">
+  <link href="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Freveal%2Ecss" rel="stylesheet">
+  <style>
+.reveal .sourceCode { 
+overflow: visible;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <link href="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Ftheme%2Fbeige%2Ecss" rel="stylesheet" id="theme">
+  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Эвристика</h1>
+  <p class="subtitle">Дисциплина - Математическое моделирование</p>
+  <p class="author">Пронякова О.М.</p>
+  <p class="institute">Российский университет дружбы народов, Москва,
+Россия</p>
+  <p class="date">03 апреля 2025</p>
+</section>
+
+<section id="информация" class="slide level1">
+<h1>Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Пронякова Ольга Максимовна</li>
+<li>студент НКАбд-02-22</li>
+<li>факультет физико-математических и естественных наук</li>
+<li>Российский университет дружбы народов</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="создание-презентации" class="slide level1">
+<h1>Создание презентации</h1>
+<p>Эвристика или эвристический метод (решения задач, ментальный ярлык,
+эмпирическое правило) — это любой подход к решению задач, в котором
+используется прагматичный метод, не полностью оптимизированный,
+усовершенствованный или рационализированный, но, тем не менее,
+«достаточно хороший» в качестве приближения или замены атрибута.</p>
+<h2 id="история">История</h2>
+<p>Слово произошло из Греции, как и сам способ обучения. Его ввел
+Сократ, который проводил с учениками так называемые сократические
+беседы, в ходе которых задавал наводящие вопросы ученикам. Таким
+образом, ученики сами приходили к правильному ответу. Заодно эти беседы
+развивали критическое мышление у детей — проблема рассматривалась
+максимально обширно, непредвзято. В переводе с греческого эвристика —
+«открываю», «отыскиваю».</p>
+<h2 id="история-1">История</h2>
+<p>Изучение эвристики в процессе принятия человеком решений было
+разработано в 1970-х и 1980-х годах психологами Амосом Тверски и
+Дэниелом Канеманом, хотя изначально эта концепция была предложена
+лауреатом Нобелевской премии Гербертом Саймоном. Изначально Саймон
+изучал решение задач, которое показало, что мы действуем в рамках того,
+что он называет ограниченной рациональностью. Он ввёл термин
+«удовлетворительное решение», обозначающий ситуацию, в которой люди ищут
+решения или принимают решения или суждения, которые «достаточно хороши»
+для их целей, хотя их можно было бы оптимизировать.</p>
+<p>Рудольф Гронер проанализировал историю эвристики от её истоков в
+Древней Греции до современных работ в области когнитивной психологии и
+искусственного интеллекта, [83] предложив когнитивный стиль
+«эвристическое мышление в противовес алгоритмическому», который можно
+оценить с помощью проверенного опросника.</p>
+<h2 id="описание-модели">Описание модели</h2>
+<p>Эвристика как наука занимается построением эвристических моделей
+процесса поиска оригинального решения задачи. Существует следующие типы
+таких моделей: * модель слепого поиска, которая опирается на метод проб
+и ошибок; * лабиринтная модель, в которой решаемая задача
+рассматривается как лабиринт, а процесс поиска решения — как блуждание
+по лабиринту; * структурно-семантическая модель, которая исходит из
+того, что в основе эвристической деятельности по решению задачи лежит
+принцип построения системы моделей, которая отражает семантические
+отношения между объектами, входящими в задачу.</p>
+<h2 id="описание-модели-1">Описание модели</h2>
+<p>Эвристики — это стратегии, основанные на правилах для принятия
+оптимальных решений, такие как эффект привязки и проблема максимизации
+полезности. Эти стратегии основаны на использовании легкодоступной, хотя
+и не всегда применимой, информации для управления решением проблем у
+людей, машин и в абстрактных задачах. Когда человек применяет эвристику
+на практике, она обычно работает так, как ожидалось. Однако она также
+может приводить к систематическим ошибкам.</p>
+<p>Самая фундаментальная эвристика — это метод проб и ошибок, который
+можно использовать во всём: от подбора гаек и болтов до нахождения
+значений переменных в алгебраических задачах. В математике некоторые
+распространённые эвристики включают использование наглядных
+представлений, дополнительных предположений, рассуждения в прямом и
+обратном направлении и упрощение.</p>
+<h2 id="главные-принципы">Главные принципы</h2>
+<p>Эвристические методы и моделирование присущи только человеку и
+отличают его от искусственных интеллектуальных (мыслящих) систем. В
+настоящее время к сфере человеческой деятельности относят: * постановку
+задачи; * выбор методов её решений и построение (разработка) моделей и
+алгоритмов, выдвижение гипотез и предположений; * осмысление результатов
+и принятие решений.</p>
+<h2 id="эвристические-методы">Эвристические методы</h2>
+<p>Метод эвристики, характерный для человека в целом, — это метод
+интуитивного поиска решений. Этот подход включает использование интуиции
+и личного опыта для нахождения оригинальных решений в сложных и
+неопределенных ситуациях. Люди способны быстро анализировать информацию,
+учитывать эмоции и контекст, что позволяет им принимать решения на
+основе неполных данных.</p>
+<p>Выделяют и несколько других методов.</p>
+<h2 id="эвристика-доступности">Эвристика доступности</h2>
+<p>Когнитивный процесс, при котором люди оценивают вероятность событий
+на основе того, насколько легко им приходит в голову соответствующий
+пример. Если событие часто вспоминается, его вероятность воспринимается
+как более высокая. Например, если человек недавно слышал о нескольких
+авиакатастрофах, он может начать считать путешествия на самолете более
+рискованными, чем есть на самом деле.</p>
+<h2 id="эвристика-аффекта">Эвристика аффекта</h2>
+<p>Эвристика аффекта описывает влияние эмоций на процесс принятия
+решений. Люди часто руководствуются своими чувствами, а не логическим
+анализом. Например, если кто-то испытывает сильные положительные эмоции
+по отношению к определенному продукту, он может переоценить его качества
+и игнорировать возможные недостатки.</p>
+<h2 id="эвристика-репрезентативности">Эвристика репрезентативности</h2>
+<p>Эвристика репрезентативности предполагает, что люди основывают свои
+оценки вероятности событий на их сходстве с типичными образцами или
+стереотипами. Например, если человек выглядит как типичный офисный
+работник, то окружающие могут предположить, что он действительно им
+является, даже если его реальная профессия совершенно иная.</p>
+<h2 id="эвристика-знакомства">Эвристика знакомства</h2>
+<p>Эвристика знакомства основана на склонности людей выбирать знакомые
+им вещи или ситуации. При выборе между несколькими товарами потребитель,
+скорее всего, отдаст предпочтение тому, с которым уже знаком, даже если
+альтернативные варианты могут быть более выгодными или
+качественными.</p>
+<h2 id="эвристика-дефицита">Эвристика дефицита</h2>
+<p>Эвристика дефицита заключается в том, что люди придают большее
+значение тем предметам или возможностям, которые воспринимаются как
+дефицитные или редкие. Например, ограниченные предложения товаров или
+акций могут восприниматься как более ценные.</p>
+<h2 id="метод-проб-и-ошибок">Метод проб и ошибок</h2>
+<p>Метод проб и ошибок — это процесс решения проблем через эксперименты,
+когда разные подходы тестируются до нахождения оптимального решения.
+Этот метод может быть трудоемким, но часто приводит к практическим
+результатам. Он хорошо подходит для ситуаций, в которых заранее неясно,
+какой подход будет наиболее эффективным.</p>
+<p>Эвристика — это стратегия, которая игнорирует часть информации с
+целью принятия решений быстрее, экономнее и/или точнее, чем при
+использовании более сложных методов.</p>
+<h2 id="как-эффективнее-использовать-эвристики">Как эффективнее
+использовать эвристики</h2>
+<p>Если человек понимает, как устроен процесс его мышления, и чутко к
+нему относится, у него больше шансов не впасть в заблуждения и не
+совершить ошибку. Каждому полезно отслеживать, где и в каких ситуациях
+мы прибегаем к эвристическим методам, и научиться подходить к решениям
+осознаннее. Вот несколько правил оптимизации эвристических методов.</p>
+<pre><code>Не торопиться. Спешка замыливает глаз, вероятность ошибки растёт. </code></pre>
+<p>Перед принятием важного решения дайте себе возможность выдохнуть и
+взвесить все за и против, а не доверяйтесь эвристике аффекта или
+доступности слепо.</p>
+<h2 id="как-эффективнее-использовать-эвристики-1">Как эффективнее
+использовать эвристики</h2>
+<pre><code>Отслеживать эмоции. Наши чувства частенько влияют на выбор, но </code></pre>
+<p>не всегда положительно. Оцените, почему вы склоняетесь к тому или
+иному варианту, и убедитесь, что решение принято не только на основе
+эмоций.</p>
+<pre><code>Не ограничивать себя одним вариантом. Многие люди думают, что мир </code></pre>
+<p>чёрно-белый. Но порой в жизни не находится единственно верного
+варианта. Оказавшись перед выбором, помните, что всегда есть
+альтернативы, которые как минимум можно рассмотреть. И только после
+этого принимайте решение.</p>
+<h2 id="вывод">Вывод</h2>
+<p>Мы сталкиваемся с эвристиками чаще, чем кажется. В плотном графике
+бытовых и рабочих задач полезно знать, каким образом мозговой навигатор
+сокращает путь от пункта «Мне нужно принять решение» до «Я всё решил».
+Это поможет лучше понимать себя и эффективнее взаимодействовать с
+миром.</p>
+<h2 class="unnumbered" id="список-литературы">Список литературы</h2>
+<p><a href="https://en.wikipedia.org/wiki/Heuristic">1. Эвристика
+Википедия</a> <a href="https://www.banki.ru/wikibank/evristika/">2.
+Эвристика-что это?</a> <a href="https://blog.wikium.ru/metodom-prob-i-oshibok-chto-takoe-evristika-i-prichem-tut-iskazheniya.html">3.
+Методом проб и ошибок: что такое эвристика и при чем тут искажение?</a>
+<a href="https://skillbox.ru/media/growth/heuristics/">4. Эвристики: что
+это такое и как они помогают принимать решения</a></p>
+</section>
+    </div>
+  </div>
+
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fdist%2Freveal%2Ejs"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fplugin%2Fnotes%2Fnotes%2Ejs"></script>
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fplugin%2Fsearch%2Fsearch%2Ejs"></script>
+  <script src="data:text/plain;charset=UTF-8;charset=utf-8,Not%20found%3A%20%2Freveal%2Ejs%404%2E6%2E1%2F%2Fplugin%2Fzoom%2Fzoom%2Ejs"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
